@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 245, 248, 250;
+  --primary-color: #0066cc;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header-search-container {
+  background-color: var(--primary-color);
+  padding: 12px 0;
+}
+
+.header-search {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-search input {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container {
+  background-color: white;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.filter-content {
+  padding-top: 8px;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.doctor-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background-color: #f8fafc;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.doctor-image.object-contain {
+  object-fit: contain;
+}
+
+.details h3 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.details .speciality {
+  color: #4b5563;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.location svg {
+  margin-right: 5px;
+  flex-shrink: 0;
+  color: #9ca3af;
+}
+
+.doctor-name {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.book-btn {
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.book-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.doctor-meta {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.doctor-meta svg {
+  margin-right: 6px;
+}
+
+.specialty-tag {
+  display: inline-block;
+  background-color: #f0f7ff;
+  color: var(--primary-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.fee-display {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.filters-clear-all {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.filter-option {
+  padding: 6px 0;
+}
+
+.radio-option, .checkbox-option {
+  display: flex;
+  align-items: center;
+}
+
+.radio-label, .checkbox-label {
+  margin-left: 8px;
+}
+
+.autocomplete-suggestions {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 50;
+}
+
+.autocomplete-suggestion {
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.autocomplete-suggestion:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-suggestion:hover {
+  background-color: #f0f7ff;
+} 
